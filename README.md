@@ -103,10 +103,15 @@ AVG(original_price)
 AVG(current_price)
 
 Total sales by category:
+
 select category,
+
        sum(current_price) as net_sale,
+       
        count(*) as total_orders
+
 from fashion_boutique_dataset
+
 group by category;
 
 
